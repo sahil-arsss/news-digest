@@ -2,6 +2,7 @@ const express=require("express");
 const dotenv=require("dotenv");
 const connectDB=require("./config/db");
 const userRoutes=require("./routes/userRoutes");
+const scrapeRoutes=require("./routes/scrapeRoutes")
 dotenv.config();
 
 const app=express();
@@ -14,6 +15,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/api/users",userRoutes);
+app.use("/api",scrapeRoutes);
 
 const PORT= process.env.PORT || 5000;
 
