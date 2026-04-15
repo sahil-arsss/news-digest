@@ -22,6 +22,14 @@ const articleSchema =new mongoose.Schema({
     scrappedAt: {
         type : Date,
         default : Date.now
+    },
+    summary : {
+        type : String,
+        default : ""
+    },
+    isSummarized : {
+        type : Boolean,
+        default : false
     }
 },{timestamps : true});
 

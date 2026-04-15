@@ -4,6 +4,7 @@ const connectDB=require("./config/db");
 const userRoutes=require("./routes/userRoutes");
 const scrapeRoutes=require("./routes/scrapeRoutes")
 const articleRoutes=require("./routes/articleRoutes");
+const aiRouts=require("./routes/aiRoutes");
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.get("/",(req,res)=>{
 app.use("/api/users",userRoutes);
 app.use("/api",scrapeRoutes);
 app.use("/api",articleRoutes);
+app.use("/api",aiRouts);
 
 const PORT= process.env.PORT || 5000;
 

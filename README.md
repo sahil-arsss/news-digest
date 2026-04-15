@@ -18,3 +18,9 @@ GET http://localhost:5000/api/articles?topic=tech
 
 Limit articles
 GET http://localhost:5000/api/articles?topic=tech&limit=5
+
+
+Test AI Summarization
+
+GET /api/scrape
+GET /api/summarize
