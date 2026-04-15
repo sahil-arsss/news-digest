@@ -25,4 +25,5 @@ const articleSchema =new mongoose.Schema({
     }
 },{timestamps : true});
 
+articleSchema.index({ topic: 1, createdAt: -1 });
 module.exports = mongoose.model("Article",articleSchema );
