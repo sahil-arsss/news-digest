@@ -1,18 +1,19 @@
-const express=require("express");
 const dotenv=require("dotenv");
+dotenv.config();
+const express=require("express");
 const connectDB=require("./config/db");
 const userRoutes=require("./routes/userRoutes");
 const scrapeRoutes=require("./routes/scrapeRoutes")
 const articleRoutes=require("./routes/articleRoutes");
 const aiRouts=require("./routes/aiRoutes");
 
-dotenv.config();
+
 
 const app=express();
 app.use(express.json());
-
+ 
 connectDB();
-
+  
 app.get("/",(req,res)=>{
     res.send("news digest is running");
 })

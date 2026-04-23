@@ -1,8 +1,6 @@
 const { GoogleGenAI } = require("@google/genai");
 
-const ai = new GoogleGenAI({
-  apiKey: process.env.AI_API_KEY
-});
+const ai = new GoogleGenAI({});
 
 const summarizeText = async (text) => {
   try {
@@ -11,7 +9,8 @@ const summarizeText = async (text) => {
       contents: `Summarize this news in 2 lines:\n${text}`
     });
     
-    return response.text.trim();
+    return response.text?.trim?.() || 
+       response.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || "";
   } catch (error) {
     console.error("AI summarization failed:", error.message);
     return "";

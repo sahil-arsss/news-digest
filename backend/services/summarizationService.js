@@ -14,6 +14,6 @@ const  summarizeArticle= async (limit=5)=>{
     }
 
     return articles.length;
-};
+}; 
 
-module.exports={summarizeArticle};
+module.exports={summarizeArticle}; 
