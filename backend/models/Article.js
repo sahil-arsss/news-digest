@@ -30,7 +30,16 @@ const articleSchema =new mongoose.Schema({
     isSummarized : {
         type : Boolean,
         default : false
-    }
+    },
+    sentiment: {
+        type: String,
+       enum: ["positive", "neutral", "negative"],
+       default: "neutral"
+    },
+         isSentimentAnalyzed: {
+        type: Boolean,
+        default: false
+ }
 },{timestamps : true});
 
 articleSchema.index({ topic: 1, createdAt: -1 });

@@ -5,9 +5,8 @@ const connectDB=require("./config/db");
 const userRoutes=require("./routes/userRoutes");
 const scrapeRoutes=require("./routes/scrapeRoutes")
 const articleRoutes=require("./routes/articleRoutes");
-const aiRouts=require("./routes/aiRoutes");
-
-
+const aiRoutes=require("./routes/aiRoutes");
+const sentimentRoutes=require("./routes/sentimentRoutes");
 
 const app=express();
 app.use(express.json());
@@ -21,8 +20,9 @@ app.get("/",(req,res)=>{
 app.use("/api/users",userRoutes);
 app.use("/api",scrapeRoutes);
 app.use("/api",articleRoutes);
-app.use("/api",aiRouts);
-
+app.use("/api",aiRoutes); 
+app.use("/api",sentimentRoutes);
+ 
 const PORT= process.env.PORT || 5000;
 
 
