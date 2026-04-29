@@ -7,6 +7,8 @@ const scrapeRoutes=require("./routes/scrapeRoutes")
 const articleRoutes=require("./routes/articleRoutes");
 const aiRoutes=require("./routes/aiRoutes");
 const sentimentRoutes=require("./routes/sentimentRoutes");
+const emailPreviewRoutes = require("./routes/emailPreviewRoutes");
+
 
 const app=express();
 app.use(express.json());
@@ -22,7 +24,9 @@ app.use("/api",scrapeRoutes);
 app.use("/api",articleRoutes);
 app.use("/api",aiRoutes); 
 app.use("/api",sentimentRoutes);
- 
+app.use("/api", emailPreviewRoutes);
+
+
 const PORT= process.env.PORT || 5000;
 
 
