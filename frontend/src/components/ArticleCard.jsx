@@ -2,7 +2,7 @@ import { getSentimentColor } from "../utils/sentimentColor";
 
 function ArticleCard({ article }) {
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 hover:shadow-lg transition">
+  <div className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition duration-300">
       
       {/* Title */}
       <a
