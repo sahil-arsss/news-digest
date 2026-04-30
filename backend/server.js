@@ -17,7 +17,7 @@ const cors =require("cors");
 const app=express();
 app.use(express.json());
  app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "*",
   credentials: true
 }));
 connectDB();
@@ -28,7 +28,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/api/users",userRoutes);
-app.use("/api",scrapeRoutes);
+app.use("/api",scrapeRoutes); 
 app.use("/api",articleRoutes);
 app.use("/api",aiRoutes); 
 app.use("/api",sentimentRoutes);

@@ -29,7 +29,7 @@ const scrapeTechNews = async () => {
       }
     });
 
-    console.log(articles);
+    
     return articles;
 
   } catch (error) {

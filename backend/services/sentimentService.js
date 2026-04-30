@@ -32,7 +32,7 @@ const analyzeSentiments = async (limit = 5) => {
   for (const article of articles) {
     const text = `${article.title}. ${article.summary}`;
     const sentiment = await analyzeSentimentText(text);
-    console.log(sentiment);
+    // console.log(sentiment);
     if (["positive", "neutral", "negative"].includes(sentiment)) {
       article.sentiment = sentiment;
       article.isSentimentAnalyzed = true;

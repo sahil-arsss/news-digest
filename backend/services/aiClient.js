@@ -13,7 +13,7 @@ const summarizeText = async (text) => {
         systemInstruction: "You summarize news articles briefly.",
       },
     });
-    console.log(response.text.trim())
+    // console.log(response.text.trim())
     return response.text.trim();
   } catch (error) {
     console.error("AI summarization failed:", error.message);
