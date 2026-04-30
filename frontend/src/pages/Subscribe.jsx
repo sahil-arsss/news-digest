@@ -1,5 +1,6 @@
 import { useState } from "react";
 import API from "../services/api";
+import toast from "react-hot-toast";
 
 const TOPICS = ["tech", "ai", "finance", "sports", "health"];
 
@@ -37,13 +38,13 @@ function Subscribe() {
                 frequency,
             });
 
-            setMessage("✅ Subscription successful!");
+            toast.success("Subscription successful!");
             setEmail("");
             setSelectedTopics([]);
             setFrequency("daily");
 
         } catch (error) {
-            setMessage("❌ Something went wrong.");
+            toast.error("Something went wrong!");
         } finally {
             setLoading(false);
         }

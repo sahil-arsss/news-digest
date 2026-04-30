@@ -6,12 +6,13 @@ import Dashboard from "./pages/Dashboard";
 import Preferences from "./pages/Preferences";
 import Unsubscribe from "./pages/Unsubscribe";
 import Navbar from "./components/Navbar";
-
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
    
     <Router>
+       <Toaster position="top-right" />
        <div className="min-h-screen bg-gray-100">
       <Navbar />
       <div className="max-w-6xl mx-auto p-4">
