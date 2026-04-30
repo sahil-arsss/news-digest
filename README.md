@@ -185,10 +185,10 @@ npm run dev
 
 
 ##for quick review these you can do these task using endpoints given in backend 
-Base URL:
+
 
 ```
-http://localhost:5000/api
+Base URL: http://localhost:5000/api
 ```
 * GET `/users/scrape`
 * GET `/users/summarize`
