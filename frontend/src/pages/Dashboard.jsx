@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import API from "../services/api";
 import ArticleCard from "../components/ArticleCard";
+import Loader from "../components/Loader";
 
 const TOPICS = ["all", "tech", "ai", "finance", "sports", "health"];
 
@@ -60,7 +61,7 @@ function Dashboard() {
       </div>
 
       {/* Loader */}
-      {loading && <p>Loading articles...</p>}
+      {loading && <Loader />}
           {/* Empty State */}
           {!loading && articles.length === 0 && (
               <p className="text-center text-gray-500 mt-10">
