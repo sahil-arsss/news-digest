@@ -13,12 +13,16 @@ const startDailyJob = require("./cron/dailyJob");
 const startWeeklyJob = require("./cron/weeklyJob");
 const unsubscribeRoutes = require("./routes/unsubscribeRoutes");
 const preferencesRoutes = require("./routes/preferencesRoutes");
-
+const cors =require("cors");
 const app=express();
 app.use(express.json());
- 
+ app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
 connectDB();
-  
+
+
 app.get("/",(req,res)=>{
     res.send("news digest is running");
 })
