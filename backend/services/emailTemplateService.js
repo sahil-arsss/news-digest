@@ -57,7 +57,7 @@ const generateEmailTemplate = ({ userEmail, groupedArticles,unsubscribeToken  })
         You are receiving this email because you subscribed to the News Digest system.
       </p>
       <p style="font-size: 12px; color: #777;">
-             <a href="http://localhost:5000/api/unsubscribe/${unsubscribeToken}">
+             <a href="http://localhost:5173/unsubscribe/${unsubscribeToken}">
        Unsubscribe
     </a>
   </p>
